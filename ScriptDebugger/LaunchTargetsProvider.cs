@@ -67,7 +67,7 @@ namespace ScriptDebugger
             {
                 Executable = exe,
                 Arguments = " \"" + scriptFile.PhysicalPath + "\"",
-                Project = projectNode.Value.AsVsHierarchy(),
+                Project = projectNode.Value.As<IVsHierarchy>(),
                 CurrentDirectory = Path.GetDirectoryName(scriptFile.PhysicalPath),
                 LaunchOperation = DebugLaunchOperation.CreateProcess,
                 LaunchDebugEngineGuid = DebuggerEngines.ManagedOnlyEngine,
